@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="1440" height="1000" viewBox="0 0 1440 1000">
+  <title>Crimson OS Preferences</title>
+  <desc>SVG wrapper displaying the interactive Crimson OS Preferences poll website.</desc>
+  <rect width="1440" height="1000" fill="#10070b"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <xhtml:html>
+      <xhtml:head>
+        <xhtml:meta charset="utf-8"/>
+        <xhtml:meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <xhtml:title>Crimson OS Preferences</xhtml:title>
+        <xhtml:style>html,body{margin:0;width:100%;height:100%;background:#10070b;color:#fff4f6;font:16px system-ui,sans-serif}iframe{display:block;width:100%;height:100%;border:0;background:#10070b}</xhtml:style>
+      </xhtml:head>
+      <xhtml:body>
+        <xhtml:iframe src="/" title="Crimson OS Preferences interactive poll website" allow="clipboard-write"></xhtml:iframe>
+      </xhtml:body>
+    </xhtml:html>
+  </foreignObject>
+</svg>
