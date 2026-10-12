@@ -29,7 +29,7 @@ function readStore() { try { return JSON.parse(fs.readFileSync(DATA_FILE, "utf8"
 function writeStore(store) { const tmp = DATA_FILE + ".tmp"; fs.writeFileSync(tmp, JSON.stringify(store, null, 2)); fs.renameSync(tmp, DATA_FILE); }
 function safeVote(v) { return { id:v.id, username:v.username, anonymous:v.anonymous, answers:v.answers, comment:v.comment, createdAt:v.createdAt }; }
 app.disable("x-powered-by");
-app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc:["'self'"], scriptSrc:["'self'","https://cdn.socket.io"], styleSrc:["'self'","'unsafe-inline'"], imgSrc:["'self'","data:","https:"], connectSrc:["'self'","ws:","wss:"] } } }));
+app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc:["'self'"], scriptSrc:["'self'","'unsafe-inline'","https://cdn.socket.io"], styleSrc:["'self'","'unsafe-inline'"], imgSrc:["'self'","data:","https:"], connectSrc:["'self'","ws:","wss:"] } } }));
 app.use(express.json({limit:"30kb"}));
 app.use(session({ secret:SESSION_SECRET, resave:false, saveUninitialized:false, cookie:{ httpOnly:true, sameSite:"lax", secure:process.env.NODE_ENV==="production", maxAge:8*60*60*1000 } }));
 app.use("/api/admin/login", rateLimit({ windowMs:15*60*1000, limit:10, standardHeaders:true, legacyHeaders:false }));
